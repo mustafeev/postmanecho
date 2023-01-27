@@ -3,8 +3,7 @@ package ru.netology;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemainClasspath;
-import static org.haacrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.equalTo;
 
 
 class PostmanEchoTest {
@@ -16,7 +15,7 @@ class PostmanEchoTest {
         // Given - When - Then
         // предусловия
         given()
-                .baseUri("https://postman-echo.com/%22)
+                .baseUri("https://postman-echo.com")
                         .contentType("text/plain; charset=UTF-8")
                         .body("Ответ на запрос!") // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
